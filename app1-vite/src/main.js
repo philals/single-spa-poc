@@ -1,7 +1,7 @@
-import './index.css'
-import { createApp, h } from 'vue'
-import App from './App.vue'
-import singleSpaVue from 'single-spa-vue'
+import "./index.css";
+import { createApp, h } from "vue";
+import App from "./App.vue";
+import singleSpaVue from "single-spa-vue";
 
 // createApp(App).mount('#app')
 
@@ -22,7 +22,7 @@ const vueLifecycles = singleSpaVue({
   },
   handleInstance: (app) => {
     // app.use(router);
-  }
+  },
 });
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;

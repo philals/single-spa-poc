@@ -14,7 +14,8 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@react-mf/root-config": "//localhost:9000/react-mf-root-config.js"
+          "@react-mf/root-config": "//localhost:9000/react-mf-root-config.js",
+          "@mpui/header": "http://localhost:8081/mpui-phil-header.js"
         }
       }
     </script>
@@ -38,6 +39,9 @@
           <route path="people">
             <application name="@react-mf/people"></application>
           </route>
+          <route path="/">
+            <application name="@mpui/header"></application>
+          </route>
           <route path="planets">
             <application name="@react-mf/planets"></application>
           </route>
@@ -60,6 +64,7 @@
       System.import("@react-mf/root-config");
       System.import("@react-mf/styleguide");
     </script>
+    <script type="module-shim" src="/react-mf-root-config.js"></script>
     <import-map-overrides-full
       show-when-local-storage="devtools"
       dev-libs
